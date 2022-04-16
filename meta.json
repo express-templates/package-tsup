@@ -1,0 +1,28 @@
+{
+  "prompts": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "message": "Package name"
+    },
+    "description": {
+      "type": "string",
+      "required": false,
+      "message": "Project description",
+      "default": "A package for npm"
+    },
+    "author": {
+      "type": "string",
+      "message": "Author"
+    },
+    "mode": {
+      "type": "list",
+      "message": "Select mode for package:",
+      "choices": [
+        { "name": "Browser", "value": "browser" },
+        { "name": "Node.js", "value": "node" },
+        { "name": "Both", "value": "both" }
+      ]
+    }
+  }
+}
