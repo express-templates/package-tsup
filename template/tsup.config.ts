@@ -15,9 +15,9 @@ export default defineConfig((options) => ({
   {{#if_eq mode "both"}}
   format: "esm,iife,cjs",
   {{/if_eq}}
-  {{/if_or mode "browser" "both"}}
+  {{#if_xor mode "browser" "both"}}
   target: "es6",
-  {{/if_or}}
+  {{/if_xor}}
   loader: {
     ".jpg": "base64",
     ".webp": "file",
