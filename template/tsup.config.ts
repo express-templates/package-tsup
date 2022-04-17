@@ -7,13 +7,13 @@ export default defineConfig((options) => ({
   minify: !options.watch,
   clean: true,
   {{#if_eq mode "browser"}}
-  format: "esm,iife",
+  format: ["esm", "iife"],
   {{/if_eq}}
   {{#if_eq mode "node"}}
-  format: "cjs",
+  format: ["cjs"],
   {{/if_eq}}
   {{#if_eq mode "both"}}
-  format: "esm,iife,cjs",
+  format: ["esm", "iife", "cjs"],
   {{/if_eq}}
   {{#if_xor mode "browser" "both"}}
   target: "es6",
